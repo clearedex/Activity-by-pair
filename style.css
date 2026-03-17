@@ -17,7 +17,7 @@ body {
 header {
     text-align: center;
     padding: 4rem 2rem;
-    background: rgba(0,0,0,0.8);
+    background: rgba(0, 0, 0, 0.8);
 }
 
 header h1 {
@@ -36,7 +36,7 @@ header p {
 
 .hero {
     height: 60vh;
-    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('chiron-hero.jpg');
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://media.architecturaldigest.com/photos/56d61c09ce4f38152ccc875b/master/w_2048%2Cc_limit/bugatti-chiron-worlds-fastest-car-01.png');
     background-size: cover;
     background-position: center;
     display: flex;
@@ -47,7 +47,7 @@ header p {
 }
 
 .hero-placeholder {
-    background: rgba(255,235,59,0.1);
+    background: rgba(255, 235, 59, 0.1);
     padding: 2rem 4rem;
     border: 2px solid #ffeb3b;
     border-radius: 10px;
@@ -76,12 +76,12 @@ h2 {
 }
 
 .spec-item {
-    background: rgba(255,255,255,0.05);
+    background: rgba(255, 255, 255, 0.05);
     padding: 2rem;
     text-align: center;
     border-radius: 15px;
     backdrop-filter: blur(10px);
-    border: 1px solid rgba(255,235,59,0.2);
+    border: 1px solid rgba(255, 235, 59, 0.2);
     transition: transform 0.3s;
 }
 
@@ -102,7 +102,7 @@ h2 {
 }
 
 .features li {
-    background: rgba(255,255,255,0.05);
+    background: rgba(255, 255, 255, 0.05);
     margin-bottom: 1rem;
     padding: 1.5rem;
     border-radius: 10px;
@@ -113,7 +113,7 @@ h2 {
 .dimensions {
     text-align: center;
     font-size: 1.3rem;
-    background: rgba(0,0,0,0.5);
+    background: rgba(0, 0, 0, 0.5);
     padding: 2rem;
     border-radius: 15px;
 }
@@ -121,12 +121,17 @@ h2 {
 footer {
     text-align: center;
     padding: 2rem;
-    background: rgba(0,0,0,0.9);
+    background: rgba(0, 0, 0, 0.9);
     font-size: 0.9rem;
     opacity: 0.8;
 }
 
 @media (max-width: 768px) {
-    .spec-grid { grid-template-columns: 1fr; }
-    main { padding: 2rem 1rem; }
+    .spec-grid {
+        grid-template-columns: 1fr;
+    }
+
+    main {
+        padding: 2rem 1rem;
+    }
 }
