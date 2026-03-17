@@ -34,43 +34,78 @@ header p {
     opacity: 0.9;
 }
 
+
 /* ===============================
    FEATURES SECTION
    =============================== */
 
 .features {
     margin-top: 4rem;
-    padding: 2rem;
+    padding: 2rem 1.5rem 4rem;
 }
 
 .features h2 {
     font-size: 2.5rem;
     text-align: center;
-    margin-bottom: 2rem;
+    margin-bottom: 0.5rem;
     color: #ffeb3b;
     text-transform: uppercase;
     letter-spacing: 0.1em;
 }
 
-.features ul {
+.features-tagline {
+    text-align: center;
+    color: #ccc;
+    max-width: 600px;
+    margin: 0 auto 2.5rem;
+    font-size: 1rem;
+}
+
+/* Responsive grid list */
+.features-grid {
     list-style: none;
-    max-width: 800px;
+    max-width: 1000px;
     margin: 0 auto;
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); /* responsive cards [web:35][web:41] */
 }
 
-.features li {
+/* Feature cards */
+.features-grid li {
+    position: relative;
     background: rgba(255,255,255,0.05);
-    margin-bottom: 1rem;
-    padding: 1.5rem;
-    border-radius: 10px;
-    font-size: 1.2rem;
+    padding: 1.5rem 1.5rem 1.5rem 3.5rem;
+    border-radius: 12px;
+    font-size: 1rem;
     border-left: 4px solid #ffeb3b;
-    transition: all 0.3s ease;
+    transition: transform 0.25s ease, 
+                box-shadow 0.25s ease, 
+                background 0.25s ease; /* smooth hover [web:32][web:42] */
+    box-shadow: 0 0 0 rgba(0,0,0,0);
 }
 
-.features li:hover {
-    transform: translateX(8px);
-    background: rgba(255,235,59,0.1);
+/* Card headings */
+.features-grid h3 {
+    margin: 0 0 0.4rem;
+    font-size: 1.2rem;
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+/* Card text */
+.features-grid p {
+    margin: 0;
+    color: #e0e0e0;
+    line-height: 1.5;
+}
+
+/* Hover interaction */
+.features-grid li:hover {
+    transform: translateY(-6px);
+    background: rgba(255,235,59,0.08);
+    box-shadow: 0 18px 40px rgba(0,0,0,0.5); /* raised “card” effect [web:38][web:40] */
 }
 
 .hero {
