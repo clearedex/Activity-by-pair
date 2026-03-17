@@ -1,33 +1,132 @@
-/* styles.css - Simple stylesheet for index.html */
+/* styles.css - Bugatti Chiron Showcase */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Arial Black', Arial, sans-serif;
+    background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 50%, #16213e 100%);
+    color: #fff;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+header {
+    text-align: center;
+    padding: 4rem 2rem;
+    background: rgba(0,0,0,0.8);
+}
+
+header h1 {
+    font-size: clamp(3rem, 8vw, 6rem);
+    color: #ffeb3b;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    margin-bottom: 1rem;
+    text-shadow: 0 0 20px #ffeb3b;
+}
+
+header p {
+    font-size: 1.5rem;
+    opacity: 0.9;
+}
+
+.hero {
+    height: 60vh;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('chiron-hero.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 4rem;
+    text-align: center;
+}
+
+.hero-placeholder {
+    background: rgba(255,235,59,0.1);
+    padding: 2rem 4rem;
+    border: 2px solid #ffeb3b;
+    border-radius: 10px;
+}
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 4rem 2rem;
+}
+
+h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 3rem;
+    color: #ffeb3b;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+.spec-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-bottom: 4rem;
+}
+
+.spec-item {
+    background: rgba(255,255,255,0.05);
+    padding: 2rem;
+    text-align: center;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,235,59,0.2);
+    transition: transform 0.3s;
+}
+
+.spec-item:hover {
+    transform: translateY(-10px);
+}
+
+.spec-item h3 {
+    font-size: 3rem;
+    color: #ffeb3b;
+    margin-bottom: 0.5rem;
+}
+
+.features ul {
+    list-style: none;
     max-width: 800px;
     margin: 0 auto;
-    padding: 2rem 1rem;
-    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-    color: #333;
-    line-height: 1.6;
 }
 
-h1 {
-    color: #2c3e50;
-    text-align: center;
-    font-size: 2.5rem;
-    margin-bottom: 1.5rem;
-    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
-}
-
-p {
-    background: white;
+.features li {
+    background: rgba(255,255,255,0.05);
+    margin-bottom: 1rem;
     padding: 1.5rem;
     border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    margin-bottom: 1rem;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
+    border-left: 4px solid #ffeb3b;
 }
 
-@media (max-width: 600px) {
-    h1 { font-size: 2rem; }
-    body { padding: 1rem 0.5rem; }
+.dimensions {
+    text-align: center;
+    font-size: 1.3rem;
+    background: rgba(0,0,0,0.5);
+    padding: 2rem;
+    border-radius: 15px;
+}
+
+footer {
+    text-align: center;
+    padding: 2rem;
+    background: rgba(0,0,0,0.9);
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+@media (max-width: 768px) {
+    .spec-grid { grid-template-columns: 1fr; }
+    main { padding: 2rem 1rem; }
 }
